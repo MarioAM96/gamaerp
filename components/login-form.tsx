@@ -1,6 +1,5 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -8,12 +7,14 @@ import {
   CardDescription,
   CardTitle,
 } from "@/components/ui/card";
+//import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useState } from "react";
 import CryptoJS from "crypto-js";
 import { apiService } from "@/services/apiService"; // Importa el servicio API
 import Cookies from 'js-cookie'; // Asegúrate de tener instalado js-cookie
+import {addToast, Button} from "@heroui/react";
 
 export function LoginForm({
   className,
@@ -44,7 +45,11 @@ export function LoginForm({
       // Guardar el token y los datos cifrados usando js-cookie
       Cookies.set('token', response.token, { path: '/' });
       Cookies.set('userData', encryptedUserData, { path: '/' });
-
+      addToast({
+        title: "Iniciando sesión",
+        description: "Bienvenido de nuevo",
+        color: "success",
+      })
       // Redirigir al usuario a la página de dashboard
       window.location.href = "/dashboard";
     } catch (err: any) {

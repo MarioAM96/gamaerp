@@ -32,6 +32,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { LucideIcon } from "lucide-react";
 
 const data = {
   navMain: [
@@ -41,12 +42,12 @@ const data = {
       icon: IconDashboard,
     },
     {
-      title: "Inventario",
+      title: "Usuarios",
       url: "inventory",
       icon: IconListDetails,
     },
     {
-      title: "Analytics",
+      title: "Usuarios1",
       url: "users",
       icon: IconChartBar,
     },
@@ -113,17 +114,17 @@ const data = {
     {
       title: "Configuración",
       url: "#",
-      icon: IconSettings,
+      icon: IconSettings as unknown as LucideIcon,
     },
     {
       title: "Get Help",
       url: "#",
-      icon: IconHelp,
+      icon: IconHelp as unknown as LucideIcon,
     },
     {
       title: "Search",
       url: "#",
-      icon: IconSearch,
+      icon: IconSearch as unknown as LucideIcon,
     },
   ],
   documents: [

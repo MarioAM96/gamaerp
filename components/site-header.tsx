@@ -26,7 +26,7 @@ export function SiteHeader({ title }: SiteHeaderProps) {
   const pageTitle =
     {
       "/": "Inicio",
-      "/inventory": "Inventario",
+      "/inventory": "Usuarios",
       "/dashboard": "Dashboard",
       "/team": "Equipo",
       // Agrega más rutas según necesites
